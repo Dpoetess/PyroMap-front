@@ -1,6 +1,10 @@
+import InteractiveMap from "../../components/InteractiveMap/InteractiveMap"
+
 const Hompage = () => {
     return (
-        <div>Hompage</div>
+        <div>
+            <InteractiveMap/>
+        </div>
     )
 }
 export default Hompage
