@@ -1,6 +1,6 @@
 # Pyromap
-![PyroMap_home-map](https://github.com/tursdlc/PyroMap-front/assets/73671402/34245ba3-f9dd-4675-862f-8af67f0f9e1f)
 
+![PyroMap_home-map](https://github.com/tursdlc/PyroMap-front/assets/73671402/34245ba3-f9dd-4675-862f-8af67f0f9e1f)
 
 - [Ir a Descripción del proyecto](#1-descripción-del-proyecto)
 - [Ir a Requisitos e instalaciones](#2-requisitos-e-instalaciones)
@@ -8,7 +8,7 @@
 - [Ir a Desarrollo del producto](#4-desarrollo-del-proyecto)
 - [Ir a Herramientas](#5-herramientas)
 - [Ir a Equipo](#6-equipo)
-
+- [Ir a deployment](#7-deployment)
 
 ### 1. Descripción del proyecto
 
@@ -26,18 +26,21 @@ En el lado del administrador, habrá una zona donde se podrán administrar tanto
 - [git](https://git-scm.com/downloads)
 
 -- Instalar el proyecto --
+
 1. Clonear el [repositorio](https://github.com/tursdlc/PyroMap-front.git)
 
 2. Instalar los paquetes de dependencias
+
 - $ npm install
 
 3. Iniciar el servidor
-- $ npm run dev
 
+- $ npm run dev
 
 ### 3. Tecnologias y dependencias
 
 FrontEnd
+
 - HTML5
 - SASS
 - Javascript
@@ -47,11 +50,11 @@ FrontEnd
 - Axios
 
 Backend:
+
 - Java
 - XAMMP
 - Spring Initializr
 - phpMyAdmin
-
 
 ### 4. Desarrollo del proyecto
 
@@ -59,9 +62,8 @@ La planificación del proyecto se llevó a cabo en un entorno colaborativo, bas�
 
 Partimos de un diseño creado en [Figma](https://www.figma.com/design/VxRTHsoenToYOUdBMCJNFQ/PyroMap?node-id=0-1&t=2nNlJxAzZHCQPLAY-0).
 
-El desarrollo del frontend del proyecto se realizó en Visual Studio Code, empleando HTML, SASS y JavaScript con el framework React. 
-El desarrollo del backend se realizó en Visual Studio code e IntelliJ, empleando Java. 
-
+El desarrollo del frontend del proyecto se realizó en Visual Studio Code, empleando HTML, SASS y JavaScript con el framework React.
+El desarrollo del backend se realizó en Visual Studio code e IntelliJ, empleando Java.
 
 ### 5. Herramientas
 
@@ -79,3 +81,11 @@ El desarrollo del backend se realizó en Visual Studio code e IntelliJ, empleand
 - [Diego Fernández Alonso](https://github.com/diegofdez56) - Frontend
 - [Jackelin Maravi](https://github.com/JackS1718) - Backend
 - [Israel](https://github.com/israelcs13) - Backend
+
+### 7. Deployment
+
+Este proyecto ha sido desplegado usando [Netlify](https://www.netlify.com/).
+
+Se puede visitar la versión desplegada en el siguiente enlace:
+
+[![Deploy](https://www.netlify.com/img/global/badges/netlify-light.svg)](https://pyromap.netlify.app/)
