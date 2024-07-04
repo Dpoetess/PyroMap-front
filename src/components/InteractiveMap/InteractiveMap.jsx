@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { APIProvider, Map, AdvancedMarker, InfoWindow, Pin } from '@vis.gl/react-google-maps';
 import { Flame } from 'lucide-react';
 import { fireData } from '../../data/fakeDataToTest';
-// import './InteractiveMap.scss';
+import './InteractiveMap.scss';
 
 const InteractiveMap = () => {
     const dataToDisplay = fireData.map((fire, index) => ({
