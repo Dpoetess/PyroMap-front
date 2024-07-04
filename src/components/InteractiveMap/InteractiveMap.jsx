@@ -1,62 +1,15 @@
-/* eslint-disable react/prop-types */
-import { useEffect, useRef, useState } from 'react';
-import { APIProvider, Map, AdvancedMarker, useMap } from '@vis.gl/react-google-maps';
-import { MarkerClusterer } from '@googlemaps/markerclusterer';
-import { Flame } from 'lucide-react';
+import { useState } from 'react';
+import { APIProvider, Map } from '@vis.gl/react-google-maps';
 import { countrySpain_url } from '../../config/urls';
 import useAPI from '../../services/UseApi';
 import './InteractiveMap.scss';
 import SearchInput from '../SearchInput/SearchInput';
-
-const Markers = ({ data }) => {
-    console.log('data', data);
-    const map = useMap();
-    const [markers, setMarkers] = useState({});
-    const clusterer = useRef(null);
-
-    useEffect(() => {
-        if (map && !clusterer.current) {
-            clusterer.current = new MarkerClusterer({ map });
-        }
-    }, [map]);
-
-    const setMarkerRef = (marker, key) => {
-        if (marker && markers[key]) return;
-        if (!marker && !markers[key]) return;
-        setMarkers(prev => {
-            if (marker) {
-                return { ...prev, [key]: marker };
-            } else {
-                const newMarkers = { ...prev };
-                delete newMarkers[key];
-                return newMarkers;
-            }
-        });
-    };
-
-    useEffect(() => {
-        if (clusterer.current) {
-            clusterer.current.clearMarkers();
-            Object.values(markers).forEach(marker => clusterer.current.addMarker(marker));
-        }
-    }, [markers]);
-
-    return (
-        <>
-            {data.map((item) => (
-                <AdvancedMarker
-                    position={item.location}
-                    key={item.key}
-                    ref={marker => setMarkerRef(marker, item.key)}>
-                    <Flame />
-                </AdvancedMarker>
-            ))}
-        </>
-    );
-};
+import Markers from './Markers/Markers';
 
 const InteractiveMap = () => {
-    const [selectedMarker, setSelectedMarker] = useState(null);
+    const [filteredData, setFilteredData] = useState([]);
+    const [mapCenter, setMapCenter] = useState({lat: 40.4637, lng: -3.7492} );
+    const [mapZoom, setMapZoom] = useState(6);
     const { data, loading, error } = useAPI(countrySpain_url);
 
     if (loading) return <p>Loading...</p>;
@@ -71,20 +24,43 @@ const InteractiveMap = () => {
         info: `Fire detected on ${fire.acq_date} at ${fire.acq_time}`,
     }));
 
+    const handleSearch = (location) => {
+        const getDistance = (lat1, lon1, lat2, lon2) => {
+            const R = 6371; // Radius of the Earth in km
+            const dLat = (lat2 - lat1) * Math.PI / 180;
+            const dLon = (lon2 - lon1) * Math.PI / 180;
+            const a =
+                0.5 - Math.cos(dLat) / 2 +
+                Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+                (1 - Math.cos(dLon)) / 2;
+
+            return R * 2 * Math.asin(Math.sqrt(a));
+        };
+
+        const filtered = dataToDisplay.filter(fire => {
+            const distance = getDistance(location.lat, location.lng, fire.location.lat, fire.location.lng);
+            return distance <= 200; // Filtra los incendios a 200 km de la ubicación del usuario
+        });
+
+        setFilteredData(filtered);
+        setMapCenter(location);
+        setMapZoom(10);
+    };
+
     const apiKey = import.meta.env.VITE_API_KEY;
     const mapID = import.meta.env.VITE_MAP_ID;
 
     return (
         <APIProvider apiKey={apiKey}>
-            <SearchInput />
+            <SearchInput onSearch={handleSearch} />
             <h1 className="u-text-accent u-font-bold u-font-xlarge title">Incendios activos actualmente</h1>
             <div className="map">
                 <Map
-                    defaultCenter={{ lat: 40.4637, lng: 3.7038 }}
-                    defaultZoom={6}
+                    defaultCenter={mapCenter}
+                    defaultZoom={mapZoom}
                     mapId={mapID}
                 >
-                    <Markers data={dataToDisplay} />
+                    <Markers data={filteredData.length > 0 ? filteredData : dataToDisplay} />
                 </Map>
             </div>
         </APIProvider>
