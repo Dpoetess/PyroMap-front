@@ -1,0 +1,8 @@
+@import '../../styles/index.scss';
+
+.user-table {
+    &-button {
+        background-color: $background-accent;
+        color: $text-color;
+    }
+}

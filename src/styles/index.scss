@@ -1,0 +1,114 @@
+// Colores
+$button-color: #44C394;
+$button-hover-color: darken($button-color, 10%);
+$background-accent: #138863;
+$background-dark: #0D4738;
+$background-general: #FFFFFF;
+$background-homepage-card: #C1F0DA;
+$text-color: #FFFFFF;
+$text-hover-color: #000000;
+$text-accent: #21A87A;
+$text-gray: #A1A1A1;
+$bg-input: #cfcaca;
+$bg-gradient: linear-gradient(0deg, #0F6D51 0%, #7ADBB4 100%);
+
+// Tipografía
+$font-family: 'Roboto', sans-serif;
+
+$font-weight-normal: 400;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+$font-size-small: 0.875rem; // 14px
+$font-size-medium: 1rem; // 16px
+$font-size-large: 1.25rem; // 20px
+$font-size-xlarge: 1.5rem; // 24px
+$font-size-xxlarge: 2rem; // 32px
+$font-size-xxxlarge: 3rem; // 48px
+
+
+body {
+    font-family: $font-family;
+    background-color: $background-general;
+}
+
+
+/* Utility Classes */
+
+// Colors
+.u-bg-button {
+    background-color: $button-color;
+}
+
+.u-bg-button-hover {
+    &:hover {
+        background-color: $button-hover-color;
+    }
+}
+
+.u-bg-accent {
+    background-color: $background-accent;
+}
+
+.u-bg-dark {
+    background-color: $background-dark;
+}
+
+.u-text-white {
+    color: $text-color;
+}
+
+.u-text-hover-black {
+    &:hover {
+        color: $text-hover-color;
+    }
+}
+
+.u-text-accent {
+    color: $text-accent;
+}
+
+.u-text-gray {
+    color: $text-gray;
+}
+
+.u-bg-gradient {
+    background: $bg-gradient;
+}
+
+// Typography
+.u-font-normal {
+    font-weight: $font-weight-normal;
+}
+
+.u-font-semibold {
+    font-weight: $font-weight-semibold;
+}
+
+.u-font-bold {
+    font-weight: $font-weight-bold;
+}
+
+.u-font-small {
+    font-size: $font-size-small;
+}
+
+.u-font-medium {
+    font-size: $font-size-medium;
+}
+
+.u-font-large {
+    font-size: $font-size-large;
+}
+
+.u-font-xlarge {
+    font-size: $font-size-xlarge;
+}
+
+.u-font-xxlarge {
+    font-size: $font-size-xxlarge;
+}
+
+.u-font-xxxlarge {
+    font-size: $font-size-xxxlarge;
+}
