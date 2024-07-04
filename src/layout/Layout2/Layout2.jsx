@@ -3,9 +3,10 @@ import './Layout2.scss'
 
 const Layout2 = () => {
     return (
-        <main className="mainLayout2">
-            <Outlet/>
-        </main>
+
+            <main className="mainLayout2">
+                <Outlet />
+            </main>
     )
 }
 export default Layout2

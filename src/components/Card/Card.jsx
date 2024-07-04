@@ -2,18 +2,13 @@
 import '../../styles/index.scss'
 import './Card.scss'
 
-
-
-const Card = ({title, description}) => {
+const Card = ({ title, description }) => {
     return (
         <div className="myCard">
-            <header>
-                <h3 className="u-font-bold u-font-large">{title}</h3>
-            </header>
-            <main>
-                <p>{description}</p>
-            </main>
+            <h3 className="u-font-bold u-font-large card-title">{title}</h3>
+            <p className="card-description">{description}</p>
         </div>
     )
 }
-export default Card
+
+export default Card;

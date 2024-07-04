@@ -43,7 +43,7 @@ const SearchInput = ({ onSearch }) => {
                 />
             </label>
             <button onClick={handleSearch}>
-                <Search size={16} color="#FFFFFF" strokeWidth={1.25} />
+            <Search size={28} color="#707070" strokeWidth={1.75} />
             </button>
         </div>
     );

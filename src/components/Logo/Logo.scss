@@ -1,0 +1,13 @@
+.logo {
+    border: 1px solid $text-color;
+    padding: 0.5rem;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    .logo-text {
+        color: $text-color;
+        font-size: $font-large;
+    }
+}

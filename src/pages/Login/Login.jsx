@@ -1,19 +1,27 @@
-import React from "react";
 import "./Login.scss";
 import { useState } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
+import { Link, useNavigate } from "react-router-dom";
 import Button from "../../components/Button/Button";
+
+
+import "bootstrap/dist/css/bootstrap.min.css";
+
+
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // enviar datos a la API (URL?)
     console.log("Email:", email);
     console.log("Password:", password);
+
+    navigate("/user");
+
   };
 
   return (
@@ -52,7 +60,7 @@ const Login = () => {
           <div className="button-container">
             <Button type="submit" text="ENTRA" />
             <p>
-              ¿No tienes una cuenta? Regístrate <a href="/register">aquí</a>
+              ¿No tienes una cuenta? Regístrate <Link to="/register">aquí</Link>
             </p>
           </div>
           {error && <p className="text-danger mt-3">{error}</p>}
