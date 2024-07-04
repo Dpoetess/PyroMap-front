@@ -1,12 +1,15 @@
 import { Outlet } from "react-router-dom"
 import Navbar from "../../components/Navbar/Navbar"
+import './Layout1.scss'
 
 const Layout1 = () => {
     return (
         <>
-        <Navbar/>
-            <Outlet/>
-        {/* footer homepage  */}
+            <Navbar />
+            <main className="main">
+                <Outlet />
+            </main>
+            {/* footer homepage  */}
         </>
     )
 }
