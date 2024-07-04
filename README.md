@@ -18,18 +18,19 @@ En el lado del administrador, habrá una zona donde se podrán administrar tanto
 
 ### 2. Requisitos e instalaciones
 
-[NodeJS]
-[git](https://git-scm.com/downloads)
+- [NodeJS](https://nodejs.org)
+- [git](https://git-scm.com/downloads)
 
 -- Instalar el proyecto --
-1. Clonear el repositorio
-https://github.com/tursdlc/PyroMap-front.git
+1. Clonear el [repositorio](https://github.com/tursdlc/PyroMap-front.git)
 
 2. Instalar los paquetes de dependencias
-npm install
+<br>
+$ npm install
 
 3. Iniciar el servidor
-npm run dev
+<br>
+$ npm run dev
 
 
 ### 3. Tecnologias y dependencias
