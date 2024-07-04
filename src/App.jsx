@@ -19,8 +19,8 @@ export default App
 
 import React from 'react';
 import useAPI from './services/UseApi';
+import Papa from 'papaparse';
 import { worldArea_url } from './config/urls';
-
 
 const App = () => {
   const { data, loading, error } = useAPI(worldArea_url);
@@ -28,10 +28,20 @@ const App = () => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
 
+  if (data) {
+    console.log('Parsed Data:', data);
+  }
+
   return (
     <div>
       <h1>Data from API</h1>
-      <pre>{data}</pre>
+      <ul>
+        {data.map((item, index) => (
+          <li key={index}>
+            {JSON.stringify(item)}
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };

@@ -1,24 +1,29 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { APIProvider, Map, AdvancedMarker, InfoWindow, Pin } from '@vis.gl/react-google-maps';
 import { Flame } from 'lucide-react';
-import { fireData } from '../../data/fakeDataToTest';
+import { worldArea_url } from '../../config/urls';
+import useAPI from '../../services/UseApi';
+//import { fireData } from '../../data/fakeDataToTest';
 // import './InteractiveMap.scss';
 
 const InteractiveMap = () => {
-    const dataToDisplay = fireData.map((fire, index) => ({
+    const [selectedMarker, setSelectedMarker] = useState(null);
+    const { data, loading, error } = useAPI(worldArea_url);
+
+    if (loading) return <p>Loading...</p>;
+    if (error) return <p>Error: {error.message}</p>;
+
+    const dataToDisplay = data.map((fire, index) => ({
         key: fire.acq_date + index, 
         location: {
-            lat: fire.latitude,
-            lng: fire.longitude,
+            lat: parseFloat(fire.latitude),
+            lng: parseFloat(fire.longitude),
         },
-        info: `Fire detected on ${fire.acq_date} at ${fire.acq_time}`
+        info: `Fire detected on ${fire.acq_date} at ${fire.acq_time}`,
     }));
 
     const apiKey = import.meta.env.VITE_API_KEY;
     const mapID = import.meta.env.VITE_MAP_ID;
-
-    const [selectedMarker, setSelectedMarker] = useState(null);
 
     return (
         <APIProvider apiKey={apiKey}>
