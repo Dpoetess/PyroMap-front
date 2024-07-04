@@ -1,7 +1,7 @@
-import React from "react";
-import "./Login.css";
+import "./Login.scss";
 import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Button from "../../components/Button/Button";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -49,9 +49,7 @@ const Login = () => {
             <label htmlFor="floatingPassword">Contraseña</label>
           </div>
           <div className="button-container">
-            <button type="submit" className="btn btn-primary mt-3">
-              ENTRAR
-            </button>
+            <Button type="submit" text="ENTRA"/>
             <p>
               ¿No tienes una cuenta? Regístrate <a href="/register">aquí</a>
             </p>

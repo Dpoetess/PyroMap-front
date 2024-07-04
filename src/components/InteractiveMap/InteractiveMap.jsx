@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { APIProvider, Map, AdvancedMarker, InfoWindow, Pin } from '@vis.gl/react-google-maps';
+import React, { useState } from 'react';
+import { APIProvider, Map, AdvancedMarker, InfoWindow, } from '@vis.gl/react-google-maps';
 import { Flame } from 'lucide-react';
 import { worldArea_url } from '../../config/urls';
 import useAPI from '../../services/UseApi';
 //import { fireData } from '../../data/fakeDataToTest';
-// import './InteractiveMap.scss';
+import './InteractiveMap.scss';
 
 const InteractiveMap = () => {
     const [selectedMarker, setSelectedMarker] = useState(null);
