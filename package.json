@@ -11,11 +11,12 @@
   },
   "dependencies": {
     "@vis.gl/react-google-maps": "^1.1.0",
+    "axios": "^1.7.2",
     "lucide-react": "^0.400.0",
+    "papaparse": "^5.4.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.24.1",
-    "sass": "^1.77.6"
+    "react-router-dom": "^6.24.1"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",
