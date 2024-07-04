@@ -25,12 +25,10 @@ En el lado del administrador, habrá una zona donde se podrán administrar tanto
 1. Clonear el [repositorio](https://github.com/tursdlc/PyroMap-front.git)
 
 2. Instalar los paquetes de dependencias
-<br>
-$ npm install
+- $ npm install
 
 3. Iniciar el servidor
-<br>
-$ npm run dev
+- $ npm run dev
 
 
 ### 3. Tecnologias y dependencias
