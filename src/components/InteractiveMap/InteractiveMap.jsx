@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import { APIProvider, Map, AdvancedMarker, InfoWindow, } from '@vis.gl/react-google-maps';
 import { Flame } from 'lucide-react';
-import { worldArea_url } from '../../config/urls';
+import { countrySpain_url } from '../../config/urls';
 import useAPI from '../../services/UseApi';
-//import { fireData } from '../../data/fakeDataToTest';
 import './InteractiveMap.scss';
 
 const InteractiveMap = () => {
     const [selectedMarker, setSelectedMarker] = useState(null);
-    const { data, loading, error } = useAPI(worldArea_url);
+    const { data, loading, error } = useAPI(countrySpain_url);
 
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error: {error.message}</p>;
