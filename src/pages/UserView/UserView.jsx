@@ -6,6 +6,7 @@ import { FireContext } from '../../context/FireContext';
 import { filterFires } from '../../utils/utils';
 import { getGeocodeData, getReverseGeocodeData } from '../../services/geocode';
 import './UserView.scss';
+import '../../styles/index.scss';
 
 const UserView = () => {
   const [show, setShow] = useState(false);
@@ -26,10 +27,8 @@ const UserView = () => {
       const fetchCoordinatesAndFires = async () => {
         try {
           const location = await getGeocodeData(userData.address);
-          console.log("Geocoded location:", location); // Debug: verifica la posizione geocodificata
           const nearbyFires = filterFires(fires, location, 100);
 
-          // Aggiungi la geocodifica inversa per ogni incendio
           const firesWithLocation = await Promise.all(nearbyFires.map(async fire => {
             const geocodeData = await getReverseGeocodeData(fire.location.lat, fire.location.lng);
             return {
@@ -39,10 +38,9 @@ const UserView = () => {
             };
           }));
 
-          console.log("Nearby fires with locations:", firesWithLocation);
           setFilteredFires(firesWithLocation);
         } catch (error) {
-          console.error("Errore nel ottenere le coordinate:", error);
+          console.error("Error:", error);
         }
       };
 
@@ -60,12 +58,17 @@ const UserView = () => {
     <div className="userview-container">
       <main className="userview-main">
         <SearchInput />
-        <UserTable handleShow={handleShow} data={filteredFires} />
-        <ConfirmationModal show={show} handleClose={handleClose} />
+        {filteredFires.length > 0 ? (
+          <>
+            <UserTable handleShow={handleShow} data={filteredFires} />
+            <ConfirmationModal show={show} handleClose={handleClose} />
+          </>
+        ) : (
+          <p className="u-font-large u-text-accent u-font-bold">No hay incendios cerca de tu ubicación.</p>
+        )}
       </main>
     </div>
   );
 };
 
 export default UserView;
-

@@ -1,20 +1,16 @@
-
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-
-
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Signup.scss";
 
-
 const Signup = () => {
   const [formData, setFormData] = useState({
-    userName: "",
+    name: "",
     email: "",
     password: "",
-    adress: "",
+    address: "",
     postcode: "",
-    phoneNumber: "",
+    phone: "",
   });
 
   const [error, setError] = useState("");
@@ -30,10 +26,8 @@ const Signup = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // lógica para backend (url?)
     localStorage.setItem("userData", JSON.stringify(formData));
     navigate("/user");
-    
   };
 
   return (
@@ -45,20 +39,20 @@ const Signup = () => {
       <div className="container">
         <form onSubmit={handleSubmit}>
           <p className="signup-title">Registro</p>
-          <div className="form-Colums">
+          <div className="form-columns">
             <div>
               <div className="form-floating mb-3">
                 <input
                   type="text"
                   className="form-control"
-                  id="floatingUserName"
+                  id="floatingName"
                   placeholder="Nombre de usuario"
-                  name="userName"
-                  value={formData.userName}
+                  name="name"
+                  value={formData.name}
                   onChange={handleChange}
                   required
                 />
-                <label htmlFor="floatingUserName">Nombre de usuario</label>
+                <label htmlFor="floatingName">Nombre de usuario</label>
               </div>
 
               <div className="form-floating mb-3">
@@ -122,14 +116,14 @@ const Signup = () => {
                 <input
                   type="text"
                   className="form-control"
-                  id="floatingPhoneNumber"
+                  id="floatingPhone"
                   placeholder="Número de Teléfono"
-                  name="phoneNumber"
-                  value={formData.phoneNumber}
+                  name="phone"
+                  value={formData.phone}
                   onChange={handleChange}
                   required
                 />
-                <label htmlFor="floatingPhoneNumber">Número de Teléfono</label>
+                <label htmlFor="floatingPhone">Número de Teléfono</label>
               </div>
             </div>
           </div>
@@ -147,4 +141,5 @@ const Signup = () => {
     </div>
   );
 };
+
 export default Signup;
