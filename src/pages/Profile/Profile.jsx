@@ -1,24 +1,127 @@
-import './Profile.scss'
+import { useState, useEffect } from 'react';
+import './Profile.scss';
 
 const Profile = () => {
-    return (
-        <>
-        <div><p className='userProfileTitle'>Mi perfil</p></div>
-        <form className='userProfileContainer'>
-        <div><label htmlFor="name">Nombre de usuario</label><input type="name"  required></input></div>
-        <div><label htmlFor="email">Correo electrónico</label><input type= "email"></input></div>
-        <div><label htmlFor="password">Contraseña</label><input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"></input></div>
-        <div><label htmlFor="address">Dirección</label><input type= ""></input></div>
-        <div><label htmlFor="postcode">Código Postal</label><input type= ""></input></div>
-        <div><label htmlFor="phone">Teléfono</label><input type= ""></input></div>
-        </form>
-        <div className='userProfileButton'>
-        <button className='userProfilebutton1'><p>GUARDAR</p></button>
-        <button className='userProfilebutton2'><p>ELIMINAR CUENTA</p></button>
+    const [userData, setUserData] = useState({
+        name: '',
+        email: '',
+        password: '',
+        address: '',
+        postcode: '',
+        phone: ''
+    });
 
+    useEffect(() => {
+        const data = localStorage.getItem('userData');
+        if (data) {
+            setUserData(JSON.parse(data));
+        }
+    }, []);
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setUserData({
+            ...userData,
+            [name]: value
+        });
+    };
+
+    const handleSave = (e) => {
+        e.preventDefault();
+        localStorage.setItem('userData', JSON.stringify(userData));
+        alert('Datos guardados correctamente');
+    };
+
+    const handleDelete = () => {
+        localStorage.removeItem('userData');
+        setUserData({
+            name: '',
+            email: '',
+            password: '',
+            address: '',
+            postcode: '',
+            phone: ''
+        });
+        alert('Cuenta eliminada correctamente');
+    };
+
+    return (
+        <div className="userProfileContainer">
+            <h1 className='userProfileTitle'>Perfil {userData.name}</h1>
+            <form onSubmit={handleSave}>
+                <div className="form-group">
+                    <label htmlFor="name">Nombre de usuario</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        value={userData.name}
+                        onChange={handleChange}
+                        required
+                    />
+                </div>
+                <div className="form-group">
+                    <label htmlFor="email">Correo electrónico</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        value={userData.email}
+                        onChange={handleChange}
+                        required
+                    />
+                </div>
+                <div className="form-group">
+                    <label htmlFor="password">Contraseña</label>
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        value={userData.password}
+                        onChange={handleChange}
+                        required
+                    />
+                </div>
+                <div className="form-group">
+                    <label htmlFor="address">Dirección</label>
+                    <input
+                        type="text"
+                        id="address"
+                        name="address"
+                        value={userData.address}
+                        onChange={handleChange}
+                        required
+                    />
+                </div>
+                <div className="form-group">
+                    <label htmlFor="postcode">Código Postal</label>
+                    <input
+                        type="text"
+                        id="postcode"
+                        name="postcode"
+                        value={userData.postcode}
+                        onChange={handleChange}
+                        required
+                    />
+                </div>
+                <div className="form-group">
+                    <label htmlFor="phone">Teléfono</label>
+                    <input
+                        type="text"
+                        id="phone"
+                        name="phone"
+                        value={userData.phone}
+                        onChange={handleChange}
+                        required
+                    />
+                </div>
+                <div className='userProfileButton'>
+                    <button type="submit" className='userProfilebutton1'>GUARDAR</button>
+                    <button type="button" className='userProfilebutton2' onClick={handleDelete}>ELIMINAR CUENTA</button>
+                </div>
+            </form>
         </div>
-       
-        </>
-    )
+    );
 }
-export default Profile
+
+export default Profile;
