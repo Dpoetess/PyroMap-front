@@ -1,5 +1,5 @@
 import React from "react";
-import "./Login.css";
+import "./Login.scss";
 import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
