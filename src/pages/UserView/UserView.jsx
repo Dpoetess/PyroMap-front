@@ -1,22 +1,17 @@
-import React, { useContext } from 'react';
+import React, { useContext } from "react";
 import './UserView.scss';
+import { useState } from "react";
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
 
 const UserView = () => {
+  const [show, setShow] = useState(false);
 
-  const handleJoin = (eventId) => {
-    console.log(`Usuario ${user.email} se ha apuntado al evento ${eventId}`);
-  };
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   return (
     <div className="userview-container">
-      <header>
-        <nav>
-          <ul>
-            <li>Mi perfil</li>
-            <li>Salir</li>
-          </ul>
-        </nav>
-      </header>
       <main>
         <input type="text" placeholder="Buscar incendios" />
         <table>
@@ -37,7 +32,24 @@ const UserView = () => {
               <td>País A</td>
               <td>1 semana</td>
               <td>01/07/2024</td>
-              <td><button className="join-button" onClick= {() => handleJoin('A')}>ME APUNTO</button></td>
+              <td>
+                <Button className="button" variant="primary" onClick={handleShow}>
+                  ME APUNTO
+                </Button>
+                <Modal show={show} onHide={handleClose}>
+                  <Modal.Header closeButton>
+                    <Modal.Title>PyroMap</Modal.Title>
+                  </Modal.Header>
+                  <Modal.Body>
+                    Inscripción realizada correctamente. ¡Muchas gracias!
+                  </Modal.Body>
+                  <Modal.Footer>
+                    <Button className="close-button" variant="primary" onClick={handleClose}>
+                      Cerrar
+                    </Button>
+                  </Modal.Footer>
+                </Modal>
+              </td>
             </tr>
             <tr>
               <td>Incendio B</td>
@@ -45,7 +57,24 @@ const UserView = () => {
               <td>País B</td>
               <td>2 semanas</td>
               <td>02/07/2024</td>
-              <td><button className="join-button" onClick={() => handleJoin('B')}>ME APUNTO</button></td>
+              <td>
+                <Button className="button" variant="primary" onClick={handleShow}>
+                  ME APUNTO
+                </Button>
+                <Modal show={show} onHide={handleClose}>
+                  <Modal.Header closeButton>
+                    <Modal.Title>PyroMap</Modal.Title>
+                  </Modal.Header>
+                  <Modal.Body>
+                    Inscripción realizada correctamente. ¡Muchas gracias!
+                  </Modal.Body>
+                  <Modal.Footer>
+                    <Button className="close-button" variant="primary" onClick={handleClose}>
+                      Cerrar
+                    </Button>
+                  </Modal.Footer>
+                </Modal>
+              </td>
             </tr>
             <tr>
               <td>Incendio C</td>
@@ -53,7 +82,24 @@ const UserView = () => {
               <td>País C</td>
               <td>3 días</td>
               <td>03/07/2024</td>
-              <td><button className="join-button" onClick={() => handleJoin('C')}>ME APUNTO</button></td>
+              <td>
+                <Button className="button" variant="primary" onClick={handleShow}>
+                  ME APUNTO
+                </Button>
+                <Modal show={show} onHide={handleClose}>
+                  <Modal.Header closeButton>
+                    <Modal.Title>PyroMap</Modal.Title>
+                  </Modal.Header>
+                  <Modal.Body>
+                    Inscripción realizada correctamente. ¡Muchas gracias!
+                  </Modal.Body>
+                  <Modal.Footer>
+                    <Button className="close-button" variant="primary" onClick={handleClose}>
+                      Cerrar
+                    </Button>
+                  </Modal.Footer>
+                </Modal>
+              </td>
             </tr>
           </tbody>
         </table>

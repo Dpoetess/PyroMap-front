@@ -5,32 +5,6 @@
   box-sizing: border-box;
 }
 
-header {
-  background-color: #138863;
-  padding: 20px;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-
-    li {
-      margin-left: 20px;
-
-      a {
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-      }
-    }
-  }
-}
-
 main {
   padding: 20px;
 
@@ -63,7 +37,7 @@ main {
       background-color: #f2f2f2;
     }
 
-    .join-button {
+    .button {
       background-color: #44C394;
       color: white;
       border: none;
@@ -75,6 +49,11 @@ main {
       &:hover {
         background-color: #2b7a78;
       }
+
     }
-  }
+
+    .close-button {
+      background-color: #44C394;
+    }
+}
 }
