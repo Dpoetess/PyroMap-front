@@ -3,7 +3,7 @@
 [Español](#Pyromap)
 
 - [Ir a Descripción del proyecto](#1-descripción-del-proyecto)
-- [Ir a Requisitos e instalaciones](#2-Requisitos e instalaciones)
+- [Ir a Requisitos e instalaciones](#2-Requisitos-e-instalaciones)
 - [Ir a Tecnologías](#3-tecnologias)
 - [Ir a Desarrollo del producto](#4-desarrollo-del-proyecto)
 - [Ir a Herramientas](#5-herramientas)
@@ -18,9 +18,10 @@ En el lado del usuario, una vez registrados con sus datos de contacto y localiza
 
 En el lado del administrador, habrá una zona donde se podrán administrar tanto los datos de los usuarios para poder enviar un aviso a los voluntarios de algún incendio activo en su entorno que necesite manos, como los datos de incendios y necesidades que se muestran a los usuarios en su área.
 
-
 ### 2. Requisitos e instalaciones
+
 [NodeJS](https://nodejs.org) para obtener el gestor de paquetes (NPM)
+<br>
 [git](https://git-scm.com/downloads)
 
 -- Instalar el proyecto --
@@ -72,12 +73,11 @@ El desarrollo del backend se realizó en Visual Studio code e IntelliJ, empleand
 ### 6. Equipo
 
 Frontend
-- [Valentina Toni](https://github.com/ItalianCookieMonster)
-- [Ana Sánchez](https://github.com/tursdlc)
-- [Lynn Poh](https://github.com/Dpoetess)
-- [Michely Paredes](https://github.com/Michely05)
-- [Diego Fernández Alonso](https://github.com/diegofdez56)
-Backend
-- [Jackelin Maravi](https://github.com/JackS1718)
-- [Israel](https://github.com/israelcs13)
+- [Valentina Toni](https://github.com/ItalianCookieMonster) - Frontend
+- [Ana Sánchez](https://github.com/tursdlc) - Frontend
+- [Lynn Poh](https://github.com/Dpoetess) - Frontend
+- [Michely Paredes](https://github.com/Michely05) - Frontend
+- [Diego Fernández Alonso](https://github.com/diegofdez56) - Frontend
+- [Jackelin Maravi](https://github.com/JackS1718) - Backend
+- [Israel](https://github.com/israelcs13) - Backend
 
