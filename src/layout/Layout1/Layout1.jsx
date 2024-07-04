@@ -6,7 +6,7 @@ const Layout1 = () => {
     return (
         <>
             <Navbar />
-            <main className="main">
+            <main className="mainLayout1">
                 <Outlet />
             </main>
             {/* footer homepage  */}

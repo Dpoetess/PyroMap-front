@@ -6,7 +6,7 @@ import './Card.scss'
 
 const Card = ({title, description}) => {
     return (
-        <div className="card">
+        <div className="myCard">
             <header>
                 <h2 className="u-font-bold u-font-large">{title}</h2>
             </header>
