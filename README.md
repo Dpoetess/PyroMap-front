@@ -1,12 +1,13 @@
 # Pyromap
 
-[Español](#Pyromap) | [English](#english)
+[Español](#Pyromap)
 
 - [Ir a Descripción del proyecto](#1-descripción-del-proyecto)
-- [Ir a Tecnologías](#2-tecnologias)
-- [Ir a Desarrollo del producto](#3-desarrollo-del-proyecto)
-- [Ir a Herramientas](#4-herramientas)
-- [Ir a Equipo](#5-equipo)
+- [Ir a Requisitos e instalaciones](#2-Requisitos e instalaciones)
+- [Ir a Tecnologías](#3-tecnologias)
+- [Ir a Desarrollo del producto](#4-desarrollo-del-proyecto)
+- [Ir a Herramientas](#5-herramientas)
+- [Ir a Equipo](#6-equipo)
 
 
 ### 1. Descripción del proyecto
@@ -18,28 +19,57 @@ En el lado del usuario, una vez registrados con sus datos de contacto y localiza
 En el lado del administrador, habrá una zona donde se podrán administrar tanto los datos de los usuarios para poder enviar un aviso a los voluntarios de algún incendio activo en su entorno que necesite manos, como los datos de incendios y necesidades que se muestran a los usuarios en su área.
 
 
-### 2. Tecnologias
+### 2. Requisitos e instalaciones
+[NodeJS](https://nodejs.org) para obtener el gestor de paquetes (NPM)
+[git](https://git-scm.com/downloads)
 
+-- Instalar el proyecto --
+1. Clonear el repositorio
+https://github.com/tursdlc/PyroMap-front.git
+
+2. Instalar los paquetes de dependencias
+npm install
+
+3. Iniciar el servidor
+npm run dev
+
+
+### 3. Tecnologias y dependencias
+
+FrontEnd
 - HTML5
 - SASS
 - Javascript
 - React
+- Bootstrap
+- React-Router-Dom
+- Axios
+
+Backend:
+- Java
+- XAMMP
+- Spring Initializr
+- phpMyAdmin
 
 
-### 3. Desarrollo del proyecto
+### 4. Desarrollo del proyecto
 
-La planificación del proyecto se llevó a cabo en un entorno colaborativo, basándose en la filosofía Agile y la metodología SCRUM, utilizando Trello como gestor de proyectos. 
+La planificación del proyecto se llevó a cabo en un entorno colaborativo, basándose en la filosofía Agile y la metodología SCRUM, utilizando Trello como gestor de proyectos. [Link al Trello](https://trello.com/invite/b/Hba9S8Lo/ATTI1e73381fc3b79891a787ccd3b43b674048B9572D/pyromap-group-5-hackathon2024)
+
+Partimos de un diseño creado en [Figma](https://www.figma.com/design/VxRTHsoenToYOUdBMCJNFQ/PyroMap?node-id=0-1&t=2nNlJxAzZHCQPLAY-0).
+
 El desarrollo del frontend del proyecto se realizó en Visual Studio Code, empleando HTML, SASS y JavaScript con el framework React. 
-El desarrollo del backend se realizó en ...
+El desarrollo del backend se realizó en Visual Studio code e IntelliJ, empleando Java. 
 
 
-### 4. Herramientas
+### 5. Herramientas
 
 - Trello
 - Git / GitHub
 - Visual Studio Code
+- IntelliJ
 
-### 5. Equipo
+### 6. Equipo
 
 Frontend
 - [Valentina Toni](https://github.com/ItalianCookieMonster)
@@ -49,54 +79,5 @@ Frontend
 - [Diego Fernández Alonso](https://github.com/diegofdez56)
 Backend
 - [Jackelin Maravi](https://github.com/JackS1718)
-- [Israel]()
+- [Israel](https://github.com/israelcs13)
 
----
-
-## English
-
-- [Go to Project Description](#1-project-description)
-- [Go to Technologies](#2-technologies)
-- [Go to Product Development](#3-product-development)
-- [Go to Tools](#4-tools)
-- [Go to Team](#5-team)
-- [Cambiar a Español](#google-store)
-
-### 1. Project Description
-
-The Pyromaps application aims to improve and preserve the world we live in. Through a world map that shows real-time wildfires to inform and raise awareness among users, the application allows and encourages users to sign up as volunteers in the areas of their choice to help with any necessary tasks or operations.
-
-On the user side, once registered with their contact and location details, they will have access to a user area where they can modify their details or withdraw their collaboration, and they are shown a list of wildfires in the country they are in, with more information on whether volunteers are needed for each fire so they can offer their help. When a user signs up to help with a fire, someone from the organizing entity will contact them via email to involve them in the volunteer deployment.
-
-On the administrator side, there will be an area where both user data can be managed to send a notice to volunteers about any active fires in their vicinity that need hands, as well as the data of fires and needs shown to users in their area.
-
-### 2. Technologies
-
-- HTML5
-- SASS
-- Javascript
-- React
-
-### 3. Product Development
-
-The project planning was carried out in a collaborative environment, based on Agile philosophy and SCRUM methodology, using Trello as the project manager. 
-The frontend development of the project was done in Visual Studio Code, using HTML, SASS, and JavaScript with the React framework. 
-The backend development was done in ...
-
-### 4. Tools
-
-- Trello
-- Git / GitHub
-- Visual Studio Code
-
-### 5. Team
-
-Frontend
-- [Valentina Toni](https://github.com/ItalianCookieMonster)
-- [Ana Sánchez](https://github.com/tursdlc)
-- [Lynn Poh](https://github.com/Dpoetess)
-- [Michely Paredes](https://github.com/Michely05)
-- [Diego Fernández Alonso](https://github.com/diegofdez56)
-Backend
-- [Jackelin Maravi](https://github.com/JackS1718)
-- [Israel]()
