@@ -10,9 +10,6 @@
     justify-content: center;
     gap: 2rem;
 
-    h1 {
-        align-self: flex-start;
-    }
 
 }
 
@@ -45,12 +42,19 @@
 
 .cardSection {
     width: 80%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
-    justify-content: space-evenly;
-    gap: 1rem;
-
     margin-bottom: 3rem;
+
+    h2 {
+        margin-bottom: 4rem;
+    }
+
+    div {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 1rem;
+    }
 }
 
