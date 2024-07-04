@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import { APIProvider, Map, AdvancedMarker, useMap } from '@vis.gl/react-google-maps';
 import { MarkerClusterer } from '@googlemaps/markerclusterer';
 import { Flame } from 'lucide-react';
-import { worldArea_url } from '../../config/urls';
+import { countrySpain_url } from '../../config/urls';
 import useAPI from '../../services/UseApi';
 import './InteractiveMap.scss';
 import SearchInput from '../SearchInput/SearchInput';
@@ -57,7 +57,7 @@ const Markers = ({ data }) => {
 
 const InteractiveMap = () => {
     const [selectedMarker, setSelectedMarker] = useState(null);
-    const { data, loading, error } = useAPI(worldArea_url);
+    const { data, loading, error } = useAPI(countrySpain_url);
 
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error: {error.message}</p>;
@@ -80,8 +80,8 @@ const InteractiveMap = () => {
             <h1 className="u-text-accent u-font-bold u-font-xlarge title">Incendios activos actualmente</h1>
             <div className="map">
                 <Map
-                    defaultCenter={{ lat: 22.54992, lng: 0 }}
-                    defaultZoom={3}
+                    defaultCenter={{ lat: 40.4637, lng: 3.7038 }}
+                    defaultZoom={6}
                     mapId={mapID}
                 >
                     <Markers data={dataToDisplay} />

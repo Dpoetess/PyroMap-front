@@ -1,3 +1,4 @@
+import React from "react";
 import "./Login.scss";
 import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -49,7 +50,7 @@ const Login = () => {
             <label htmlFor="floatingPassword">Contraseña</label>
           </div>
           <div className="button-container">
-            <Button type="submit" text="ENTRA"/>
+            <Button type="submit" text="ENTRA" />
             <p>
               ¿No tienes una cuenta? Regístrate <a href="/register">aquí</a>
             </p>
