@@ -1,6 +1,5 @@
 
 import InteractiveMap from '../../components/InteractiveMap/InteractiveMap'
-import SearchInput from '../../components/SearchInput/SearchInput'
 import Button from '../../components/Button/Button'
 import { Link } from 'react-router-dom'
 import { cardsData } from '../../data/cardRecommedationsData'
@@ -12,8 +11,6 @@ const Hompage = () => {
     return (
         <>
             <section className="mapSection">
-                <SearchInput />
-                <h1 className="u-text-color u-font-bold u-font-xlarge">Incendios activos actualmente</h1>
                 <InteractiveMap />
             </section>
             <section className="callToAction u-text-color">
@@ -24,11 +21,15 @@ const Hompage = () => {
                 </Link>
             </section>
             <section className="cardSection">
-                {
-                    cardsData.map((card, index) => {
-                        return <Card key={index} title={card.title} description={card.description} />
-                    })
-                }
+                <h2 className="u-font-bold u-font-xlarge u-text-accent">Medidas de prevención contra incendios</h2>
+                <div>
+
+                    {
+                        cardsData.map((card, index) => {
+                            return <Card key={index} title={card.title} description={card.description} />
+                        })
+                    }
+                </div>
             </section>
         </>
     )

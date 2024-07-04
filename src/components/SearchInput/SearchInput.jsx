@@ -3,20 +3,30 @@ import { useState } from 'react';
 import { Search } from 'lucide-react';
 import './SearchInput.scss';
 
-const SearchInput = () => {
+const SearchInput = ({ onSearch }) => {
     const [searchText, setSearchText] = useState('');
 
     const handleInputChange = (event) => {
         setSearchText(event.target.value);
     };
 
-    const handleSearch = () => {
-        console.log("Texto de búsqueda:", searchText);
-    };
-
     const handleKeyPress = (event) => {
         if (event.key === 'Enter') {
             handleSearch();
+        }
+    };
+
+    const apiKey = import.meta.env.VITE_API_KEY;
+    const handleSearch = async () => {
+        if (searchText.trim()) {
+            const response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(searchText)}&key=${apiKey}`);
+            const data = await response.json();
+            if (data.results.length > 0) {
+                const { lat, lng } = data.results[0].geometry.location;
+                onSearch({ lat, lng });
+            } else {
+                console.error("No results found");
+            }
         }
     };
 
@@ -33,7 +43,7 @@ const SearchInput = () => {
                 />
             </label>
             <button onClick={handleSearch}>
-                <Search size={25} color="#887c7c" strokeWidth={1.25} />
+                <Search size={16} color="#FFFFFF" strokeWidth={1.25} />
             </button>
         </div>
     );

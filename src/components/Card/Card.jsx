@@ -8,7 +8,7 @@ const Card = ({title, description}) => {
     return (
         <div className="myCard">
             <header>
-                <h2 className="u-font-bold u-font-large">{title}</h2>
+                <h3 className="u-font-bold u-font-large">{title}</h3>
             </header>
             <main>
                 <p>{description}</p>
