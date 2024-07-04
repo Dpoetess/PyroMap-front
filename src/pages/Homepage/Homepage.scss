@@ -1,0 +1,56 @@
+@import '../../styles/index.scss';
+
+
+.mapSection{
+    margin-block: 5rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    h1 {
+        align-self: flex-start;
+    }
+
+}
+
+.callToAction {
+    align-self: stretch;
+    margin-inline: 0;
+
+    padding-block: 4rem;
+    margin-bottom: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+
+    color: $text-color;
+    background-color: $background-dark;
+
+    text-align: center;
+
+
+    p {
+        max-width: 70%;
+        line-height: 1.5rem;
+
+    }
+}
+
+.cardSection {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-evenly;
+    gap: 1rem;
+
+    margin-bottom: 3rem;
+}
+
