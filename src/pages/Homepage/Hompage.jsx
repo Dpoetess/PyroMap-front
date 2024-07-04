@@ -3,7 +3,9 @@ import InteractiveMap from '../../components/InteractiveMap/InteractiveMap'
 import SearchInput from '../../components/SearchInput/SearchInput'
 import Button from '../../components/Button/Button'
 import { Link } from 'react-router-dom'
+import { cardsData } from '../../data/cardRecommedationsData'
 import './Homepage.scss'
+import Card from '../../components/Card/Card'
 
 
 const Hompage = () => {
@@ -20,6 +22,13 @@ const Hompage = () => {
                 <Link to="/register">
                     <Button text="ME APUNTO" type="button" />
                 </Link>
+            </section>
+            <section className="cardSection">
+                {
+                    cardsData.map((card, index) => {
+                        return <Card key={index} title={card.title} description={card.description} />
+                    })
+                }
             </section>
         </>
     )
