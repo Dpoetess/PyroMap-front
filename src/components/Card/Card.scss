@@ -1,7 +1,7 @@
 @import '../../styles/index.scss';
 
-.card {
-    background-color: $background-card;
+.myCard {
+    background-color: $background-homepage-card;
     border-radius: 2rem;
     border: 1px solid black;
 
@@ -9,6 +9,7 @@
     padding: 2rem;
 
     max-width: 16rem;
+    min-height: 100%;
 
     header {
         margin-bottom: 1rem;

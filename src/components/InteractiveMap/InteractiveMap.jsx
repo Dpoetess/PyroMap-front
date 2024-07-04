@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { APIProvider, Map, AdvancedMarker, InfoWindow } from '@vis.gl/react-google-maps';
-import { Flame, MapPin } from 'lucide-react';
-import { fireData } from '../../data/fakeDataToTest';
+import React, { useState } from 'react';
+import { APIProvider, Map, AdvancedMarker, InfoWindow, } from '@vis.gl/react-google-maps';
+import { Flame } from 'lucide-react';
+import { worldArea_url } from '../../config/urls';
+import useAPI from '../../services/UseApi';
+//import { fireData } from '../../data/fakeDataToTest';
 import './InteractiveMap.scss';
 import SearchInput from '../SearchInput/SearchInput';
 
@@ -10,6 +12,19 @@ const InteractiveMap = () => {
     const [selectedMarker, setSelectedMarker] = useState(null);
     const [mapCenter, setMapCenter] = useState({ lat: 22.54992, lng: 0 });
     const [mapZoom, setMapZoom] = useState(2);
+    const { data, loading, error } = useAPI(worldArea_url);
+
+    if (loading) return <p>Loading...</p>;
+    if (error) return <p>Error: {error.message}</p>;
+
+    const dataToDisplay = data.map((fire, index) => ({
+        key: fire.acq_date + index, 
+        location: {
+            lat: parseFloat(fire.latitude),
+            lng: parseFloat(fire.longitude),
+        },
+        info: `Fire detected on ${fire.acq_date} at ${fire.acq_time}`,
+    }));
 
     const apiKey = import.meta.env.VITE_API_KEY;
     const mapID = import.meta.env.VITE_MAP_ID;
@@ -32,10 +47,10 @@ const InteractiveMap = () => {
         return R * 2 * Math.asin(Math.sqrt(a));
     };
 
-    const filteredData = userLocation ? fireData.filter(fire => {
+    const filteredData = userLocation ? data.filter(fire => {
         const distance = getDistance(userLocation.lat, userLocation.lng, fire.latitude, fire.longitude);
         return distance <= 200; // Filtra los incendios a 50 km de la ubicación del usuario
-    }) : fireData;
+    }) : data;
 
     console.log(filteredData);
     

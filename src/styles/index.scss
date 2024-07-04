@@ -3,7 +3,8 @@ $button-color: #44C394;
 $button-hover-color: darken($button-color, 10%);
 $background-accent: #138863;
 $background-dark: #0D4738;
-$background-card: #C1F0DA;
+$background-general: #FFFFFF;
+$background-homepage-card: #C1F0DA;
 $text-color: #FFFFFF;
 $text-hover-color: #000000;
 $text-accent: #21A87A;
@@ -26,6 +27,7 @@ $font-size-xxlarge: 2rem; // 32px
 
 body {
     font-family: $font-family;
+    background-color: $background-general;
 }
 
 
@@ -104,4 +106,3 @@ body {
 .u-font-xxlarge {
     font-size: $font-size-xxlarge;
 }
-
