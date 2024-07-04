@@ -31,7 +31,7 @@ const Signup = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // lógica para backend (url?)
-
+    localStorage.setItem("userData", JSON.stringify(formData));
     navigate("/user");
     
   };
