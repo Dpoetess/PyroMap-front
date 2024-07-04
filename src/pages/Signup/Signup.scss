@@ -14,11 +14,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   p {
     font-weight: bold;
     font-size: 3rem;
     color: #ffff;
   }
+
   span {
     font-weight: 400;
     font-size: 2rem;
@@ -48,10 +50,10 @@ form {
   border-radius: 20px;
 }
 
-.form-Colums{
-    display: flex;
-    flex-direction: row;
-    gap: 3rem;
+.form-columns {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
 }
 
 .signup-title {
@@ -66,6 +68,7 @@ form {
   justify-content: center;
   align-items: center;
   padding: 1rem;
+
   button {
     width: 10rem;
     height: 3rem;
@@ -75,17 +78,21 @@ form {
     font-size: 1.2rem;
     background-color: #44c394;
   }
+
   button:hover {
     background-color: #0f6d51;
   }
+
   p {
     padding-top: 0.5rem;
     font-size: 0.8rem;
   }
+
   a {
     color: #44c394;
     font-weight: 700;
   }
+
   a:hover {
     color: #062820;
   }
