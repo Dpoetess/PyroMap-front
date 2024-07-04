@@ -1,9 +1,7 @@
 # Pyromap
 
-[Español](#Pyromap)
-
 - [Ir a Descripción del proyecto](#1-descripción-del-proyecto)
-- [Ir a Requisitos e instalaciones](#2-Requisitos-e-instalaciones)
+- [Ir a Requisitos e instalaciones](#2-requisitos-e-instalaciones)
 - [Ir a Tecnologías](#3-tecnologias)
 - [Ir a Desarrollo del producto](#4-desarrollo-del-proyecto)
 - [Ir a Herramientas](#5-herramientas)
@@ -20,8 +18,7 @@ En el lado del administrador, habrá una zona donde se podrán administrar tanto
 
 ### 2. Requisitos e instalaciones
 
-[NodeJS](https://nodejs.org) para obtener el gestor de paquetes (NPM)
-<br>
+[NodeJS]
 [git](https://git-scm.com/downloads)
 
 -- Instalar el proyecto --
@@ -72,7 +69,6 @@ El desarrollo del backend se realizó en Visual Studio code e IntelliJ, empleand
 
 ### 6. Equipo
 
-Frontend
 - [Valentina Toni](https://github.com/ItalianCookieMonster) - Frontend
 - [Ana Sánchez](https://github.com/tursdlc) - Frontend
 - [Lynn Poh](https://github.com/Dpoetess) - Frontend
@@ -80,4 +76,3 @@ Frontend
 - [Diego Fernández Alonso](https://github.com/diegofdez56) - Frontend
 - [Jackelin Maravi](https://github.com/JackS1718) - Backend
 - [Israel](https://github.com/israelcs13) - Backend
-
