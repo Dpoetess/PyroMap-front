@@ -1,10 +1,10 @@
 import { Outlet } from "react-router-dom"
-import NavBarList from "../../components/NavBarList/NavBarList"
+import UserNavBar from "../../components/UserNavBar/UserNavBar"
 
 const Layout3 = () => {
     return (
         <div>
-            <NavBarList/>
+            <UserNavBar />
 
             <main>
                 <Outlet/>

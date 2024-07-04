@@ -9,6 +9,7 @@ $text-color: #FFFFFF;
 $text-hover-color: #000000;
 $text-accent: #21A87A;
 $text-gray: #A1A1A1;
+$bg-input: #cfcaca;
 $bg-gradient: linear-gradient(0deg, #0F6D51 0%, #7ADBB4 100%);
 
 // Tipografía
@@ -23,6 +24,7 @@ $font-size-medium: 1rem; // 16px
 $font-size-large: 1.25rem; // 20px
 $font-size-xlarge: 1.5rem; // 24px
 $font-size-xxlarge: 2rem; // 32px
+$font-size-xxxlarge: 3rem; // 48px
 
 
 body {
@@ -105,4 +107,8 @@ body {
 
 .u-font-xxlarge {
     font-size: $font-size-xxlarge;
+}
+
+.u-font-xxxlarge {
+    font-size: $font-size-xxxlarge;
 }

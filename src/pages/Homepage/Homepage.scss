@@ -1,42 +1,32 @@
 @import '../../styles/index.scss';
 
-
-.mapSection{
+.mapSection {
     margin-block: 5rem;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 2rem;
-
-
 }
 
 .callToAction {
     align-self: stretch;
     margin-inline: 0;
-
+    width: 100vw;
     padding-block: 4rem;
     margin-bottom: 2rem;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 2rem;
-
-
     color: $text-color;
     background-color: $background-dark;
-
     text-align: center;
-
 
     p {
         max-width: 70%;
         line-height: 1.5rem;
-
     }
 }
 
@@ -52,9 +42,8 @@
         width: 100%;
         display: flex;
         flex-wrap: wrap;
-        align-items: center;
+        align-items: stretch; 
         justify-content: space-evenly;
         gap: 1rem;
     }
 }
-

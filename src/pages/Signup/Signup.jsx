@@ -1,7 +1,11 @@
-import React from "react";
-import "./Signup.scss";
+
 import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+
+
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./Signup.scss";
+
 
 const Signup = () => {
   const [formData, setFormData] = useState({
@@ -14,6 +18,7 @@ const Signup = () => {
   });
 
   const [error, setError] = useState("");
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -26,6 +31,9 @@ const Signup = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // lógica para backend (url?)
+
+    navigate("/user");
+    
   };
 
   return (
@@ -129,6 +137,9 @@ const Signup = () => {
             <button type="submit" className="btn btn-primary mt-3">
               ENTRAR
             </button>
+            <p>
+              ¿YA tienes una cuenta? Ingresa <Link to="/register/login">aquí</Link>
+            </p>
           </div>
           {error && <p className="text-danger mt-3">{error}</p>}
         </form>

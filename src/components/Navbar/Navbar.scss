@@ -1,22 +1,48 @@
 @import '../../styles/index.scss';
 
 .navBar {
-   width:100%;
+   width: 100%;
    height: 80px;
    background-color: $background-accent;
-}
-.linkNavbar {
-   color: $text-color;
-   text-decoration: none;
-}
-.navBar{
-   display: flex;
-   justify-content: end;
-   
-}
-.navBarText{
-   display: flex;
-   align-items: center;
-   margin-right: 40px;
-   gap:58px;
+   padding-inline: 1rem;
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   align-items: last baseline;
+   justify-items: center; 
+
+   .linkNavbar {
+      color: $text-color;
+      text-decoration: none;
+   }
+
+   .ul-links {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0;
+   }
+
+   .ul-links li a:hover {
+      color: black;
+   }
+
+
+   .ul-link-login,
+   .ul-link-register {
+      border: 1px solid $text-color;
+      border-radius: 3rem;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+   }
+
+   .ul-link-login:hover ,
+   .ul-link-register:hover{
+      border-color: black;
+      color: black;
+   }
+
+   .ul-link-login > a:hover,
+   .ul-link-register > a:hover {
+      color: black;
+   }
 }

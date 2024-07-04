@@ -1,8 +1,10 @@
 # Pyromap
+![PyroMap_home-map](https://github.com/tursdlc/PyroMap-front/assets/73671402/34245ba3-f9dd-4675-862f-8af67f0f9e1f)
+
 
 - [Ir a Descripción del proyecto](#1-descripción-del-proyecto)
 - [Ir a Requisitos e instalaciones](#2-requisitos-e-instalaciones)
-- [Ir a Tecnologías](#3-tecnologias)
+- [Ir a Tecnologías](#3-tecnologias-y-dependencias)
 - [Ir a Desarrollo del producto](#4-desarrollo-del-proyecto)
 - [Ir a Herramientas](#5-herramientas)
 - [Ir a Equipo](#6-equipo)
@@ -15,6 +17,8 @@ La aplicación Pyromaps tiene como finalidad mejorar y conservar el mundo en el 
 En el lado del usuario, una vez registrados con sus datos de contacto y localización, tendrán acceso a una zona de usuario donde, por un lado, pueden modificar sus datos o eliminar su colaboración, y por otro lado, se les muestra una lista de incendios en el país donde se encuentran, con más información sobre si se necesitan voluntarios en cada incendio para que puedan ofrecer su ayuda. Cuando un usuario se apunta a ayudar en un incendio, alguien de la entidad organizadora se pondrá en contacto con él mediante correo electrónico para poder involucrarle en el despliegue de voluntarios.
 
 En el lado del administrador, habrá una zona donde se podrán administrar tanto los datos de los usuarios para poder enviar un aviso a los voluntarios de algún incendio activo en su entorno que necesite manos, como los datos de incendios y necesidades que se muestran a los usuarios en su área.
+
+![PyroMap_screens](https://github.com/tursdlc/PyroMap-front/assets/73671402/e68b7a4a-d07c-4d3a-bd9b-14bf3c4ff222)
 
 ### 2. Requisitos e instalaciones
 
