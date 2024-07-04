@@ -1,0 +1,54 @@
+@import '../../styles/index.scss';
+
+.userProfileTitle{
+    font-size: $font-size-xlarge;
+    font-weight: $font-weight-semibold;
+    margin-left: 30px;
+}
+.userProfileContainer{
+    display: inline-block;
+    justify-content: space-around;
+    width:500px;
+    height: 450px;
+    
+    input{
+        width:200px;
+        height:30px;
+        background-color: rgb(229, 220, 220);
+        border-radius: 6px;
+        margin-left: 20px;
+        cursor: pointer;
+        float: right;
+    }
+    label{
+        
+        font-size: $font-size-medium;
+        font-weight: $font-weight-semibold;
+        margin-bottom: 20px;
+    }
+  }
+.userProfileButton{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:20px;
+    text-align: center;
+    p{
+        font-size: 14.5px;
+        color:white;
+        
+    }
+  }
+.userProfilebutton1{
+    width: 160px;
+    height: 50px;
+    background-color: $background-accent;
+    border-radius: 20px;
+    
+}
+.userProfilebutton2{
+    width: 160px;
+    height: 50px;
+    background-color: rgb(230, 84, 84);
+    border-radius: 20px;
+}
