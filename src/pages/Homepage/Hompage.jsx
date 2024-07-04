@@ -1,6 +1,15 @@
+
+import InteractiveMap from '../../components/InteractiveMap/InteractiveMap'
+import SearchInput from '../../components/SearchInput/SearchInput'
+import './Homepage.scss'
+
+
 const Hompage = () => {
     return (
-        <div>Hompage</div>
+        <section className="mapSection">
+            <SearchInput />
+            <InteractiveMap/>
+        </section>
     )
 }
 export default Hompage
