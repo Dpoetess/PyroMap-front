@@ -8,54 +8,49 @@ import Signup from "../pages/Signup/Signup";
 import Profile from "../pages/Profile/Profile";
 import UserView from "../pages/UserView/UserView";
 
-
 const router = createBrowserRouter([
-    {
+  {
+    path: "/",
+    element: <Layout1 />,
+    children: [
+      {
         path: "/",
-        element: <Layout1 />,
-        children: [{
-            path: "/",
-            element: <Hompage />
-        },
-        {
-            path: "/about",
-            element: <div>Aqui hay que mostrar About</div>
-        }
-        ]
-    },
-    {
-        path: "/register",
-        element: <Layout2 />,
-        children: [
-            {
-                path: "/register/",
-                element: <Signup />
-            },
-            {
-                path: "/register/login",
-                element: <Login />
-            },
+        element: <Hompage />,
+      },
+      {
+        path: "/about",
+        element: <div>Aqui hay que mostrar About</div>,
+      },
+    ],
+  },
+  {
+    path: "/register",
+    element: <Layout2 />,
+    children: [
+      {
+        path: "/register/",
+        element: <Signup />,
+      },
+      {
+        path: "/register/login",
+        element: <Login />,
+      },
+    ],
+  },
+  {
+    path: "/user",
+    element: <Layout3 />,
+    children: [
+      {
+        path: "/user/",
+        element: <UserView />,
+      },
+      {
+        path: "/user/profile",
+        element: <Profile />,
+      },
+    ],
+  },
+]);
 
-        ]
-    },
-    {
-        path: "/user",
-        element: <Layout3 />,
-        children: [
-            {
-                path: "/user/",
-                element: <UserView />
-            },
-            {
-                path: "/user/profile",
-                element: <Profile />
-            },
-
-        ]
-    },
-])
-
-
-
-
-export default router
+export default router;

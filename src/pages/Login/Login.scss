@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  gap: 4rem;
+}
+
+.welcome-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  p {
+    font-weight: bold;
+    font-size: 3rem;
+    color: #ffff;
+  }
+  span {
+    font-weight: 400;
+    font-size: 2rem;
+    color: #ffff;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container input {
+  width: 20rem;
+  background-color: #d9d9d9;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffff;
+  padding: 4rem;
+  border-radius: 20px;
+}
+
+.signup-title {
+  font-weight: bold;
+  font-size: 2rem;
+  color: #062820;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  button {
+    width: 10rem;
+    height: 3rem;
+    border: none;
+    border-radius: 5rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    background-color: #44c394;
+  }
+  button:hover {
+    background-color: #0f6d51;
+  }
+  p {
+    padding-top: 0.5rem;
+    font-size: 0.8rem;
+  }
+  a {
+    color: #44c394;
+    font-weight: 700;
+  }
+  a:hover {
+    color: #062820;
+  }
+}
