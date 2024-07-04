@@ -1,0 +1,21 @@
+@import '../../styles/index.scss';
+
+.myCard {
+    background-color: $background-homepage-card;
+    border-radius: 2rem;
+    border: 1px solid black;
+    text-align: center;
+    padding: 1rem;
+    max-width: 16rem;
+
+
+    .card-title {
+        margin-bottom: 0.5rem;
+    }
+
+    .card-description {
+        line-height: 1.5rem;
+        margin-bottom: 0;
+        padding: 0;
+    }
+}
