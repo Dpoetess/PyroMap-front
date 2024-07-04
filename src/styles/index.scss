@@ -1,106 +1,107 @@
-// Colores
-$button-color: #44C394;
-$button-hover-color: darken($button-color, 10%);
-$background-accent: #138863;
-$background-dark: #0D4738;
-$text-color: #FFFFFF;
-$text-hover-color: #000000;
-$text-accent: #21A87A;
-$text-gray: #A1A1A1;
-$bg-gradient: linear-gradient(0deg, #0F6D51 0%, #7ADBB4 100%);
+// // Colores
+// $button-color: #44C394;
+// $button-hover-color: darken($button-color, 10%);
+// $background-accent: #138863;
+// $background-dark: #0D4738;
+// $background-card: #C1F0DA;
+// $text-color: #FFFFFF;
+// $text-hover-color: #000000;
+// $text-accent: #21A87A;
+// $text-gray: #A1A1A1;
+// $bg-gradient: linear-gradient(0deg, #0F6D51 0%, #7ADBB4 100%);
 
-// Tipografía
-$font-family: 'Roboto', sans-serif;
+// // Tipografía
+// $font-family: 'Roboto', sans-serif;
 
-$font-weight-normal: 400;
-$font-weight-semibold: 600;
-$font-weight-bold: 700;
+// $font-weight-normal: 400;
+// $font-weight-semibold: 600;
+// $font-weight-bold: 700;
 
-$font-size-small: 0.875rem; // 14px
-$font-size-medium: 1rem; // 16px
-$font-size-large: 1.25rem; // 20px
-$font-size-xlarge: 1.5rem; // 24px
-$font-size-xxlarge: 2rem; // 32px
-
-
-body {
-    font-family: $font-family;
-}
+// $font-size-small: 0.875rem; // 14px
+// $font-size-medium: 1rem; // 16px
+// $font-size-large: 1.25rem; // 20px
+// $font-size-xlarge: 1.5rem; // 24px
+// $font-size-xxlarge: 2rem; // 32px
 
 
-/* Utility Classes */
+// body {
+//     font-family: $font-family;
+// }
 
-// Colors
-.u-bg-button {
-    background-color: $button-color;
-}
 
-.u-bg-button-hover {
-    &:hover {
-        background-color: $button-hover-color;
-    }
-}
+// /* Utility Classes */
 
-.u-bg-accent {
-    background-color: $background-accent;
-}
+// // Colors
+// .u-bg-button {
+//     background-color: $button-color;
+// }
 
-.u-bg-dark {
-    background-color: $background-dark;
-}
+// .u-bg-button-hover {
+//     &:hover {
+//         background-color: $button-hover-color;
+//     }
+// }
 
-.u-text-white {
-    color: $text-color;
-}
+// .u-bg-accent {
+//     background-color: $background-accent;
+// }
 
-.u-text-hover-black {
-    &:hover {
-        color: $text-hover-color;
-    }
-}
+// .u-bg-dark {
+//     background-color: $background-dark;
+// }
 
-.u-text-accent {
-    color: $text-accent;
-}
+// .u-text-white {
+//     color: $text-color;
+// }
 
-.u-text-gray {
-    color: $text-gray;
-}
+// .u-text-hover-black {
+//     &:hover {
+//         color: $text-hover-color;
+//     }
+// }
 
-.u-bg-gradient {
-    background: $bg-gradient;
-}
+// .u-text-accent {
+//     color: $text-accent;
+// }
 
-// Typography
-.u-font-normal {
-    font-weight: $font-weight-normal;
-}
+// .u-text-gray {
+//     color: $text-gray;
+// }
 
-.u-font-semibold {
-    font-weight: $font-weight-semibold;
-}
+// .u-bg-gradient {
+//     background: $bg-gradient;
+// }
 
-.u-font-bold {
-    font-weight: $font-weight-bold;
-}
+// // Typography
+// .u-font-normal {
+//     font-weight: $font-weight-normal;
+// }
 
-.u-font-small {
-    font-size: $font-size-small;
-}
+// .u-font-semibold {
+//     font-weight: $font-weight-semibold;
+// }
 
-.u-font-medium {
-    font-size: $font-size-medium;
-}
+// .u-font-bold {
+//     font-weight: $font-weight-bold;
+// }
 
-.u-font-large {
-    font-size: $font-size-large;
-}
+// .u-font-small {
+//     font-size: $font-size-small;
+// }
 
-.u-font-xlarge {
-    font-size: $font-size-xlarge;
-}
+// .u-font-medium {
+//     font-size: $font-size-medium;
+// }
 
-.u-font-xxlarge {
-    font-size: $font-size-xxlarge;
-}
+// .u-font-large {
+//     font-size: $font-size-large;
+// }
+
+// .u-font-xlarge {
+//     font-size: $font-size-xlarge;
+// }
+
+// .u-font-xxlarge {
+//     font-size: $font-size-xxlarge;
+// }
 
