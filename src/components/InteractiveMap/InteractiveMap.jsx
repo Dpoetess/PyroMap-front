@@ -28,8 +28,8 @@ const InteractiveMap = () => {
         <APIProvider apiKey={apiKey}>
             <div className="map" style={{height: "60vh", width: "80vw"}}>
                 <Map
-                    defaultCenter={{ lat: 22.54992, lng: 0 }}
-                    defaultZoom={3}
+                    defaultCenter={{ lat: 40.4637, lng: 3.7038 }}
+                    defaultZoom={6}
                     mapId={mapID}
                 >
                     {dataToDisplay.map((fire, index) => (
