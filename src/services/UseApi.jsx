@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import Papa from 'papaparse';
 
 const useAPI = (url) => {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -10,7 +11,8 @@ const useAPI = (url) => {
     const fetchData = async () => {
       try {
         const response = await axios.get(url);
-        setData(response.data);
+        const parsedData = Papa.parse(response.data, { header: true }).data;
+        setData(parsedData);
       } catch (err) {
         setError(err);
       } finally {
