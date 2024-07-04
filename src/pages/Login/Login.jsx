@@ -3,10 +3,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Button from "../../components/Button/Button";
 
-
 import "bootstrap/dist/css/bootstrap.min.css";
-
-
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -21,7 +18,6 @@ const Login = () => {
     console.log("Password:", password);
 
     navigate("/user");
-
   };
 
   return (
