@@ -32,8 +32,6 @@ const InteractiveMap = () => {
             <h1 className="u-text-accent u-font-bold u-font-xlarge title">Incendios activos actualmente</h1>
             <div className="map">
                 <Map
-                    center={mapCenter}
-                    zoom={mapZoom}
                     defaultCenter={mapCenter}
                     defaultZoom={mapZoom}
                     mapId={mapID}
