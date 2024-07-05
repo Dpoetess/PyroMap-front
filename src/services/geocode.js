@@ -8,7 +8,7 @@ export const getGeocodeData = async (address) => {
 
     if (data.status !== "OK") {
         console.error("Geocoding error:", data);
-        throw new Error("Non è stato possibile trovare la posizione");
+        throw new Error("It is not possible to fin the location");
     }
 
     return data.results[0].geometry.location;
@@ -20,7 +20,7 @@ export const getReverseGeocodeData = async (lat, lng) => {
 
     if (data.status !== "OK") {
         console.error("Reverse Geocoding error:", data);
-        throw new Error("Non è stato possibile trovare la posizione inversa");
+        throw new Error("It is not possible to fin the location");
     }
 
     const result = data.results[0];
