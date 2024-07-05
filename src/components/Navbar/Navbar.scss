@@ -5,10 +5,10 @@
    height: 80px;
    background-color: $background-accent;
    padding-inline: 1rem;
-   display: grid;
-   grid-template-columns: repeat(3, 1fr);
-   align-items: last baseline;
-   justify-items: center; 
+   padding-top: 1rem;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
 
    .linkNavbar {
       color: $text-color;
@@ -20,12 +20,20 @@
       align-items: center;
       gap: 1rem;
       padding: 0;
+
+      &.ul-links-nav {
+         flex: 1;
+       }
+
+       &.ul-links-user {
+         flex: 1;
+         justify-content: flex-end;
+       }
    }
 
    .ul-links li a:hover {
       color: black;
    }
-
 
    .ul-link-login,
    .ul-link-register {
@@ -44,5 +52,12 @@
    .ul-link-login > a:hover,
    .ul-link-register > a:hover {
       color: black;
+   }
+
+   .pyroMapTitle {
+      color: $text-color;
+      font-size: 3rem;
+      text-align: center;
+      font-weight: $font-weight-bold;
    }
 }

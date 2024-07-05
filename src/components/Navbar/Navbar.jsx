@@ -5,7 +5,6 @@ import "./Navbar.scss";
 const Navbar = () => {
   return (
     <nav className="navBar">
-      <div></div>
       <ul className="ul-links ul-links-nav">
         <li>
           <Link to="/" className="linkNavbar">
@@ -18,6 +17,7 @@ const Navbar = () => {
           </Link>
         </li>
       </ul>
+      <p className="pyroMapTitle">PYROMAP</p>
       <ul className="ul-links ul-links-user">
         <li className="ul-link-login">
           <Link to="/register/login" className="linkNavbar">
