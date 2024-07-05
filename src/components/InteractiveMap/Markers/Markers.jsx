@@ -7,15 +7,13 @@ import { Flame } from 'lucide-react';
 const Markers = ({ data }) => {
     const map = useMap();
     const [markers, setMarkers] = useState({});
-    const [selectedMarker, setSelectedMarker] = useState(null); // Estado para el marcador seleccionado
+    const [selectedMarker, setSelectedMarker] = useState(null);
     const clusterer = useRef(null);
-
 
     useEffect(() => {
         if (map && !clusterer.current) {
             clusterer.current = new MarkerClusterer({
                 map,
-
             });
         }
     }, [map]);
@@ -23,6 +21,7 @@ const Markers = ({ data }) => {
     const setMarkerRef = (marker, key) => {
         if (marker && markers[key]) return;
         if (!marker && !markers[key]) return;
+
         setMarkers(prev => {
             if (marker) {
                 return { ...prev, [key]: marker };
@@ -48,7 +47,7 @@ const Markers = ({ data }) => {
                     position={item.location}
                     key={item.key}
                     ref={marker => setMarkerRef(marker, item.key)}
-                    onClick={() => setSelectedMarker(item)} // Establecer el marcador seleccionado
+                    onClick={() => setSelectedMarker(item)}
                 >
                     <Flame size={48} color="#e81111" />
                 </AdvancedMarker>
@@ -56,7 +55,7 @@ const Markers = ({ data }) => {
             {selectedMarker && (
                 <InfoWindow
                     position={selectedMarker.location}
-                    onCloseClick={() => setSelectedMarker(null)} // Cerrar el InfoWindow
+                    onCloseClick={() => setSelectedMarker(null)}
                 >
                     <p>{selectedMarker.info}</p>
                 </InfoWindow>
