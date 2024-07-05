@@ -14,8 +14,7 @@ const UserView = () => {
   const [filteredFires, setFilteredFires] = useState([]);
   const { fires, loading, error } = useContext(FireContext);
 
-  useEffect(() => {
-    // Recupera i dati dell'utente dal local storage
+  useEffect(() => { 
     const data = localStorage.getItem("userData");
     if (data) {
       setUserData(JSON.parse(data));
