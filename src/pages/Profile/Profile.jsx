@@ -14,7 +14,15 @@ const Profile = () => {
     useEffect(() => {
         const data = localStorage.getItem('userData');
         if (data) {
-            setUserData(JSON.parse(data));
+            const parsedData = JSON.parse(data);
+            setUserData({
+                name: parsedData.name || '',
+                email: parsedData.email || '',
+                password: parsedData.password || '',
+                address: parsedData.address || '',
+                postcode: parsedData.postcode || '',
+                phone: parsedData.phone || ''
+            });
         }
     }, []);
 
