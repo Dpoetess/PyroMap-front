@@ -17,6 +17,7 @@ export const filterFires = (data, location, radius = 100) => {
         const userLon = parseFloat(location.lng);
 
         if (isNaN(fireLat) || isNaN(fireLon) || isNaN(userLat) || isNaN(userLon)) {
+            console.error("Coordinate non valide", { fireLat, fireLon, userLat, userLon });
             return false;
         }
 
